@@ -22,6 +22,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
     line-height:1.5;
+  image-rendering: -webkit-optimize-contrast;backface-visibility: hidden;
 }
 html{font-size:62.5%;	min-width:1200px;width:100%;overflow-x:hidden;
 }

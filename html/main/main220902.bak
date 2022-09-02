@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="referrer" content="always">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<!-- No cache -->
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+<!-- Summary -->
+<meta property="og:title" content="danida">
+<meta property="og:description" content="danida">
+<title>danida</title>
+<link rel="stylesheet" type="text/css" href="../../assets/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="../../assets/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../../assets/css/content.css" />
+<link rel="stylesheet" type="text/css" href="../../assets/css/jquery.scrollbar.css" />
+<link rel="stylesheet" type="text/css" href="../../assets/css/examples.css" />
+
+<script type="text/javascript" src="../../assets/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="../../assets/js/jquery.scrollbar.min.js"></script>
+
+<script type="text/javascript" src="../../assets/js/lib/highlight.pack.js"></script>
+<script type="text/javascript" src="../../assets/js/lib/modernizr.custom.min.js"></script>
+<script type="text/javascript" src="../../assets/js/examples.js"></script>
+
+<script type="text/javascript" src="../../assets/js/lib/gsap3/gsap.min.js"></script>
+<script type="text/javascript" src="../../assets/js/uncompressed/ScrollMagic.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<script type="text/javascript" src="../../assets/js/uncompressed/plugins/animation.gsap.js"></script>
+<script type="text/javascript" src="../../assets/js/uncompressed/plugins/debug.addIndicators.js"></script>
+
+<script>var controller = new ScrollMagic.Controller();</script>
+
+</head>
+<body>
+<div id="layout">
+    <!-- header -->
+	<div id="header">
+		<div id="" class="container">
+			<h1 id="logo"><a href="javascript:;'" onclick="$('html, body').animate({scrollTop: 0}, 1000);">danida</a></h1>
+			<button type="button" class="menu_toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span class="sound_only">메뉴 열기</span>
+			</button>
+			<div class="hd_menu">
+				<ul id="nav">
+					<li><a href="javascript:;" data-target="#sec3">서비스 소개</a></li>
+					<li><a href="javascript:;" data-target="#sec4">주요 서비스</a></li>
+					<li><a href="javascript:;" data-target="#sec9">핵심 가치</a></li>
+				</ul>
+				<script>
+				$('#nav a').click(function(){
+					let dataTarget = $(this).attr('data-target');
+					let target = $(dataTarget).offset().top;
+					$('html, body').animate({
+						scrollTop: target
+					}, 1000);
+				});
+				</script>
+			</div>
+		</div>
+	</div>  
+	<!-- //header -->
+
+
+    <div id="example-wrapper" class="main_content">
+		<div class="sec1_height"></div>
+		<section class="secwrap1" id="sec1">
+			<div class="main_video">
+				<!-- <video loop muted autoplay="autoplay" playsinline style="visibility:visible" poster='./assets/images/content/main_video.jpg'> -->
+				<video id="video1"  muted autoplay="autoplay" playsinline preload="auto" style="visibility:visible;z-index:2;" >
+					<source src="../../assets/videos/1.mp4" type="video/mp4">
+					<source src="../../assets/videos/1.webm" type="video/webm">
+				</video>
+				<video id="video2"  muted  preload="auto" style="visibility:visible" >
+					<source src="../../assets/videos/2.mp4" type="video/mp4">
+					<source src="../../assets/videos/2.webm" type="video/webm">
+				</video>
+				<video id="video3"  muted  preload="auto" style="visibility:visible" >
+					<source src="../../assets/videos/3.mp4" type="video/mp4">
+					<source src="../../assets/videos/3.webm" type="video/webm">
+				</video>
+				<video id="video4"  muted  preload="auto" style="visibility:visible" >
+					<source src="../../assets/videos/4.mp4" type="video/mp4">
+					<source src="../../assets/videos/4.webm" type="video/webm">
+				</video>
+				<script>
+				$(function(){ 
+					$("#video1").bind("ended", function() {
+						document.getElementById("video2").play();
+						$(".main_video video").css('z-index', '0');
+						$("#video2").css('z-index', '1');
+						console.log('1')
+					});
+					$("#video2").bind("ended", function() {
+						document.getElementById("video3").play();
+						$(".main_video video").css('z-index', '0');
+						$("#video3").css('z-index', '1');
+						console.log('2')
+						});
+					$("#video3").bind("ended", function() {
+						document.getElementById("video4").play();
+						$(".main_video video").css('z-index', '0');
+						$("#video4").css('z-index', '1');
+						console.log('3')
+					});
+					$("#video4").bind("ended", function() {
+						document.getElementById("video1").play();
+						$(".main_video video").css('z-index', '0');
+						$("#video1").css('z-index', '1');
+						console.log('4')
+					});
+				}); 
+				</script>
+			</div>
+			<div class="section1">
+				<div class="left">
+					<div class="sec_title"><img src="../../assets/images/sec1_title.png" alt="danida 여행의 시작과 끝"></div>
+					<div class="sec_store">
+						<div class="item">
+							<a href="javascript:;"><img src="../../assets/images/sec1_appstore.png" alt="appstore"></a>
+						</div>
+						<div class="item">
+							<a href="javascript:;"><img src="../../assets/images/sec1_googleplay.png" alt="googleplay"></a>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+				</div>
+			</div>
+		</section>
+		<section class="secwrap2" id="sec2">
+				<div class="sec_title">이제는 짐없이 여행을 다니다</div>
+				<div class="trigger"></div>
+				<script>
+				var timeline = new TimelineMax();
+
+				var tween_bgposition = new TimelineMax();
+
+				  tween_bgposition
+				  .to("#sec2 .sec_title", 0.3, {
+					ease: Linear.easeNone,
+					backgroundPosition: "0% 50%,50% 50%",
+				  })
+				  .to("#sec2 .sec_title", 0.3, {
+					ease: Linear.easeNone,
+					backgroundPosition: "100% 50%,50% 50%",
+				  }, "0.4");
+
+
+				timeline.add(tween_bgposition, 0);
+
+				var scene_main = new ScrollMagic.Scene({
+				  triggerElement: "#sec2 .trigger",
+				  duration: "1100px"
+				})
+				  .setTween(timeline)
+				  .addTo(controller)
+				  .addIndicators();
+				</script>
+		</section>
+
+
+		<section class="secwrap3" id="sec3">
+				<span class="trigger_0"></span>
+				<div class="txt txt1">여행지에서 언어장벽 없이<br/>이동하고 싶다면</div>
+				<div class="trigger trigger_1"></div>
+				<div class="txt txt2">공항 도착 후 여행지로 바로 가고 싶지만<br/>캐리어 때문에 불편했다면 </div>
+				<div class="trigger trigger_2"></div>
+				<div class="txt txt3">우리 아이와 함께하는 여행,<br/>카시트가 무거워 불편했다면</div>
+				<div class="trigger trigger_3"></div>
+			<script>
+			var animateElem = ["#sec3 .txt1", "#sec3 .txt2", "#sec3 .txt3"];
+			var triggerElem = [".trigger_1", ".trigger_2", ".trigger_3"];
+
+			for (var i = 0; i < animateElem.length; i++) {
+			  var currentAnimateElem = animateElem[i];
+			  var currentTriggerElem = triggerElem[i];
+
+			  var timeline = new TimelineMax();
+
+			  var tween_move = TweenMax.fromTo(
+				currentAnimateElem,
+				1,
+				{
+				 ease: "slow(0.7, 0.7)",
+				  y: 300
+				},
+				{
+				 ease: "slow(0.7, 0.7)",
+				  y: -300
+				}
+			  );
+
+			  var tween_opacity = new TimelineMax();
+			  tween_opacity
+				.to(currentAnimateElem, 0.3, {
+				  ease: Linear.easeNone,
+				  opacity: 1
+				})
+				.to(
+				  currentAnimateElem,
+				  0.3,
+				  {
+					ease: Linear.easeNone,
+					opacity: 0
+				  },
+				  "+=0.4"
+				);
+
+			  timeline.add(tween_move, 0).add(tween_opacity, 0);
+
+			  var scene_main = new ScrollMagic.Scene({
+				triggerElement: currentTriggerElem,
+				duration: "1400px"
+			  })
+				.setTween(timeline)
+				.addTo(controller)
+				  .addIndicators();
+			}
+			</script>
+		</section>
+
+		<section class="secwrap4" id="sec4">
+			<div class="section4">
+				<div class="left">
+					<div class="title">대화 가능한 언어로<br/>운전자 매칭</div>
+					<p>여행지에서 차량 이동 중에 언어로 인한 불편함을 느끼지 않도록<br/>선택한 언어로 운전자 매칭이 진행됩니다. </p>
+					<span>*한국어, 영어, 일본어 선택 가능</span>
+				</div>
+				<div class="right"></div>
+			</div>
+		</section>
+
+
+		<div id="pinContainer" style="background-color:#fff;z-index:999;">
+			<section class="secwrap5 panel blue" id="sec5">
+				<div class="section5">
+					<div class="left"></div>
+					<div class="right">
+						<div class="title">여행이 편해지는<br/>캐리어배달</div>
+						<p>이제 불편한 캐리어나 골프백은 다니다가 배달해드립니다.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="secwrap6 panel turqoise" id="sec6">
+				<div class="section6">
+					<div class="cnt">
+						<div class="title">캐리어배달<br/>걱정없이 편안하게</div>
+						<p>안심하고 캐리어배달 하는 3가지 방법.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script>
+			$(function () { // wait for document ready
+				var wipeAnimation = new TimelineMax()
+					.fromTo(".secwrap6",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+				new ScrollMagic.Scene({
+						triggerElement: "#pinContainer",
+						triggerHook: "onLeave",
+						duration: "300%"
+					})
+					.setPin("#pinContainer")
+					.setTween(wipeAnimation)
+					//.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+			});
+		</script>
+		<div style="height:3313px;position:relative;">
+		<section class="secwrap7 clearfix" id="sec7">
+			<div class="trigger1"></div>
+			<div class="section7">
+				<div class="title">캐리어배달<br/>걱정없이 편안하게</div>
+				<div class="sec7_cnt">
+					<div id="" class="sec7_inner">
+						<div class="box box1">
+							<div class="txt">
+								<div class="tit">실시간 캐리어<br/>위치 확인</div>
+								<div class="cnt">여행하며 언제 어디서나<br/>캐리어배달 위치를 확인하세요.</div>
+							</div>
+						</div>
+						<div class="box box2">
+							<div class="txt">
+								<div class="tit">캐리어<br/>보안 스티커</div>
+								<div class="cnt">이제는 캐리어도 배달하는 시대.<br/>집에서 먹는 배달 치킨처럼 열지 않고 그대로 <br/>배달합니다.</div>
+							</div>
+						</div>
+						<div class="box box3">
+							<div class="txt">
+								<div class="tit">캐리어배달 완료<br/>인증 사진</div>
+								<div class="cnt">배달 완료된 캐리어는 인증사진으로 확인,<br/>호텔에서 태그 사진을 보여주고 체크인하세요. </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="trigger2"></div>
+		</section>
+		</div>
+		<script>
+			var timeline = new TimelineMax();
+			var sec7title = new TimelineMax();
+			sec7title
+			  .to("#sec7 .title", 0.3, {
+				ease: Linear.easeNone,
+				opacity: 1,
+				y: -200
+			  })
+
+			timeline.add(sec7title, 0);
+
+			var scene_main = new ScrollMagic.Scene({
+			  triggerElement: "#sec7 .trigger1",
+			  duration: "300px"
+			})
+			  .setTween(timeline)
+			  .addTo(controller)
+			  //.addIndicators();
+
+
+
+			var timeline = new TimelineMax();
+
+			var tween_bgposition = new TimelineMax();
+			tween_bgposition
+			  .to("#sec7 .sec7_inner", 0.3, {
+				ease:  "slow(0.7, 0.7)",
+				x: -1794
+			  });
+
+			timeline.add(tween_bgposition, 0);
+
+			var scene_main = new ScrollMagic.Scene({
+			  triggerElement: "#sec7 .trigger2",
+			  duration: "2100px"
+			})
+			  .setTween(timeline)
+			  .addTo(controller)
+			  //.addIndicators();
+
+			  $(window).scroll(function(){
+					//스크롤 이동시 작동코드
+					console.log( $(document).scrollTop(),$(window).height(), $('#sec8').offset().top)
+					let bt = $('#sec8').offset().top - $(document).scrollTop() - $(window).height() - 80;
+					if( $(document).scrollTop() < $('#sec8').offset().top  + $(window).height()){
+						if( $(document).scrollTop() + $(window).height() >= $('#sec8').offset().top){
+							$('.secwrap7 ').css('position', 'absolute');
+							$('.secwrap7 ').css('left', '0');
+							$('.secwrap7 ').css('bottom', bt);
+						}else{
+							$('.secwrap7 ').css('position', 'relative');
+							$('.secwrap7 ').css('left', '0');
+							$('.secwrap7 ').css('bottom', '0');
+						}
+					}
+				});
+
+		</script>
+
+		<section class="secwrap8" id="sec8">
+			<div class="section8">
+				<div class="cnt">
+					<div class="title">무겁지만 우리 아이를 위한 카시트<br/>터치 한 번으로 해결 </div>
+					<p>이제 우리 아이와 여행 할 때 무거운 카시트 들고 다닐 필요 없어요.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="secwrap9" id="sec9">
+			<div class="section9">
+				<div class="cnt">
+					<div class="title">여행의 본질</div>
+					<p>그동안 우리는 여행할 때 항상 짐이 걸림돌처럼 느껴지곤 했습니다.<br/>
+					다니다는 여행자의 행복과 편의를 위해 언어와 캐리어 같은 여행의 불편함을 해결하고자 합니다.<br/>
+					여행의 순간순간과 여행자의 시간은 소중합니다.
+					</p>
+				</div>
+			</div>
+		</section>
+		
+		<div id="footer">
+			<div class="container">
+				<div class="ft_cnt clearfix">
+					<div class="ft_cp">
+						<span class="cp">다니다 주식회사 danida Corp.</span>
+						<span>서울시 강남구 강남대로 140길 9 비피유 3층</span>
+						<span>대표 : 장병철</span>
+					</div>
+					<div class="ft_info">
+						<span>사업자등록번호: 789-87-02140</span>
+						<span>통신판매사업자번호: 제 2022-서울강남-04240호 </span>
+						<span>전화번호: 02-542-0402 </span>
+						<span>팩스번호: 02-543-0403 </span>
+						<span>이메일: official@danidam.com</span>
+					</div>
+					<ul class="ft_links">
+						<li><a href="javascript:;">기업소개</a></li>
+						<li><a href="javascript:;">서비스이용약관</a></li>
+						<li><a href="javascript:;">개인정보처리방침</a></li>
+						<li><a href="javascript:;">사업자정보확인</a></li>
+					</ul>
+				</div>
+				<div class="ft_copy">Copyright © <strong>2022 danida Corp</strong>. All rights reserved.</div>
+			</div>
+		</div>
+		
+	</div>  
+</div>  
+
+<script type="text/javascript" src="../../assets/js/tracking.js"></script>
+
+</body>
+</html>

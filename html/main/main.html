@@ -42,7 +42,7 @@
     <!-- header -->
 	<div id="header">
 		<div id="" class="container">
-			<h1 id="logo"><a href="../main/main.html">danida</a></h1>
+			<h1 id="logo"><a href="javascript:;'" onclick="$('html, body').animate({scrollTop: 0}, 1000);">danida</a></h1>
 			<button type="button" class="menu_toggle">
 				<span></span>
 				<span></span>
@@ -51,9 +51,19 @@
 			</button>
 			<div class="hd_menu">
 				<ul id="nav">
-					<li><a href="javascript:;">서비스 소개</a></li>
-					<li><a href="javascript:;">주요 서비스</a></li>
-					<li><a href="javascript:;">핵심 가치</a></li>
+					<li><a href="javascript:;" data-target="#sec3">서비스 소개</a></li>
+					<li><a href="javascript:;" data-target="#sec4">주요 서비스</a></li>
+					<li><a href="javascript:;" data-target="#sec9">핵심 가치</a></li>
+				</ul>
+				<script>
+				$('#nav a').click(function(){
+					let dataTarget = $(this).attr('data-target');
+					let target = $(dataTarget).offset().top;
+					$('html, body').animate({
+						scrollTop: target
+					}, 1000);
+				});
+				</script>
 			</div>
 		</div>
 	</div>  
@@ -65,11 +75,50 @@
 		<section class="secwrap1" id="sec1">
 			<div class="main_video">
 				<!-- <video loop muted autoplay="autoplay" playsinline style="visibility:visible" poster='./assets/images/content/main_video.jpg'> -->
-				<video loop muted autoplay="autoplay" playsinline style="visibility:visible" >
-					<source src="../../assets/videos/index_bg.mp4" type="video/mp4">
-					<source src="../../assets/videos/index_bg.webm" type="video/webm">
-					<source src="../../assets/videos/index_bg.ogg" type="video/ogg">
+				<video id="video1"  muted autoplay="autoplay" playsinline preload="auto" style="visibility:visible;z-index:2;" >
+					<source src="../../assets/videos/1.mp4" type="video/mp4">
+					<source src="../../assets/videos/1.webm" type="video/webm">
 				</video>
+				<video id="video2"  muted  preload="auto" style="visibility:visible" >
+					<source src="../../assets/videos/2.mp4" type="video/mp4">
+					<source src="../../assets/videos/2.webm" type="video/webm">
+				</video>
+				<video id="video3"  muted  preload="auto" style="visibility:visible" >
+					<source src="../../assets/videos/3.mp4" type="video/mp4">
+					<source src="../../assets/videos/3.webm" type="video/webm">
+				</video>
+				<video id="video4"  muted  preload="auto" style="visibility:visible" >
+					<source src="../../assets/videos/4.mp4" type="video/mp4">
+					<source src="../../assets/videos/4.webm" type="video/webm">
+				</video>
+				<script>
+				$(function(){ 
+					$("#video1").bind("ended", function() {
+						document.getElementById("video2").play();
+						$(".main_video video").css('z-index', '0');
+						$("#video2").css('z-index', '1');
+						console.log('1')
+					});
+					$("#video2").bind("ended", function() {
+						document.getElementById("video3").play();
+						$(".main_video video").css('z-index', '0');
+						$("#video3").css('z-index', '1');
+						console.log('2')
+						});
+					$("#video3").bind("ended", function() {
+						document.getElementById("video4").play();
+						$(".main_video video").css('z-index', '0');
+						$("#video4").css('z-index', '1');
+						console.log('3')
+					});
+					$("#video4").bind("ended", function() {
+						document.getElementById("video1").play();
+						$(".main_video video").css('z-index', '0');
+						$("#video1").css('z-index', '1');
+						console.log('4')
+					});
+				}); 
+				</script>
 			</div>
 			<div class="section1">
 				<div class="left">
@@ -94,11 +143,17 @@
 				var timeline = new TimelineMax();
 
 				var tween_bgposition = new TimelineMax();
-				tween_bgposition
+
+				  tween_bgposition
 				  .to("#sec2 .sec_title", 0.3, {
 					ease: Linear.easeNone,
 					backgroundPosition: "0% 50%,50% 50%",
 				  })
+				  .to("#sec2 .sec_title", 0.3, {
+					ease: Linear.easeNone,
+					backgroundPosition: "100% 50%,50% 50%",
+				  }, "0.4");
+
 
 				timeline.add(tween_bgposition, 0);
 
@@ -114,6 +169,8 @@
 
 
 		<section class="secwrap3" id="sec3">
+				<span class="trigger_0"></span>
+				<!-- <div class="trigger trigger_11"></div> -->
 				<div class="txt txt1">여행지에서 언어장벽 없이<br/>이동하고 싶다면</div>
 				<div class="trigger trigger_1"></div>
 				<div class="txt txt2">공항 도착 후 여행지로 바로 가고 싶지만<br/>캐리어 때문에 불편했다면 </div>
@@ -121,6 +178,10 @@
 				<div class="txt txt3">우리 아이와 함께하는 여행,<br/>카시트가 무거워 불편했다면</div>
 				<div class="trigger trigger_3"></div>
 			<script>
+			var ht = ($(window).height() / 2) + ($("#sec3 .txt1").outerHeight() / 2);
+
+			
+
 			var animateElem = ["#sec3 .txt1", "#sec3 .txt2", "#sec3 .txt3"];
 			var triggerElem = [".trigger_1", ".trigger_2", ".trigger_3"];
 
@@ -128,46 +189,40 @@
 			  var currentAnimateElem = animateElem[i];
 			  var currentTriggerElem = triggerElem[i];
 
-			  var timeline = new TimelineMax();
+				var timeline = new TimelineMax();
+				var tween_bgposition = new TimelineMax();
+				  tween_bgposition
+				  .to(animateElem[i], 0.3, {
+					ease: "slow(0.7, 0.7)",
+					  y: -ht
+				  })
+				   .to(animateElem[i], 0.3, {
+						ease: "slow(0.7, 0.7)",
+					  y: -ht * 2
+					  }, "0.7");
 
-			  var tween_move = TweenMax.fromTo(
-				currentAnimateElem,
-				1,
-				{
-				 ease: "slow(0.7, 0.7)",
-				  y: 250
-				},
-				{
-				 ease: "slow(0.7, 0.7)",
-				  y: -250
-				}
-			  );
-
-			  var tween_opacity = new TimelineMax();
-			  tween_opacity
-				.to(currentAnimateElem, 0.3, {
-				  ease: Linear.easeNone,
-				  opacity: 1
-				})
-				.to(
-				  currentAnimateElem,
-				  0.3,
-				  {
+					  var tween_opacity = new TimelineMax();
+				  tween_opacity
+					.to(animateElem[i], 0.3, {
 					ease: Linear.easeNone,
-					opacity: 0
-				  },
-				  "+=0.4"
-				);
+					  opacity: 1
+				  })
+				   .to(animateElem[i], 0.3, {
+						ease: Linear.easeNone,
+					  opacity: 0
+					  }, "0.7");
 
-			  timeline.add(tween_move, 0).add(tween_opacity, 0);
+				timeline.add(tween_bgposition, 0).add(tween_opacity, 0);
 
-			  var scene_main = new ScrollMagic.Scene({
-				triggerElement: currentTriggerElem,
-				duration: "900px"
-			  })
-				.setTween(timeline)
-				.addTo(controller);
+				var scene_main = new ScrollMagic.Scene({
+				  triggerElement: triggerElem[i],
+				  duration: "1800px"
+				})
+				  .setTween(timeline)
+				  .addTo(controller)
+				  .addIndicators();
 			}
+
 			</script>
 		</section>
 
@@ -180,6 +235,32 @@
 				</div>
 				<div class="right"></div>
 			</div>
+			<div class="trigger trigger_1"></div>
+			<script>
+				var timeline = new TimelineMax();
+
+				var tween_bgposition = new TimelineMax();
+
+				  tween_bgposition
+				  .to("#sec4 .sec_title", 0.3, {
+					ease: "slow(0.7, 0.7)",
+					  y: -ht
+				  })
+				  .to("#sec4 .sec_title", 0.3, {
+						ease: "slow(0.7, 0.7)",
+					  y: -ht * 2
+					  }, "0.7");
+
+				timeline.add(tween_bgposition, 0);
+
+				var scene_main = new ScrollMagic.Scene({
+				  triggerElement: "#sec4 .trigger",
+				  duration: "1100px"
+				})
+				  .setTween(timeline)
+				  .addTo(controller)
+				  .addIndicators();
+				</script>
 		</section>
 
 
@@ -214,11 +295,11 @@
 					})
 					.setPin("#pinContainer")
 					.setTween(wipeAnimation)
-					.addIndicators() // add indicators (requires plugin)
+					//.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 			});
 		</script>
-
+		<div style="height:3313px;position:relative;">
 		<section class="secwrap7 clearfix" id="sec7">
 			<div class="trigger1"></div>
 			<div class="section7">
@@ -248,6 +329,7 @@
 			</div>
 			<div class="trigger2"></div>
 		</section>
+		</div>
 		<script>
 			var timeline = new TimelineMax();
 			var sec7title = new TimelineMax();
@@ -266,7 +348,7 @@
 			})
 			  .setTween(timeline)
 			  .addTo(controller)
-			  .addIndicators();
+			  //.addIndicators();
 
 
 
@@ -283,11 +365,28 @@
 
 			var scene_main = new ScrollMagic.Scene({
 			  triggerElement: "#sec7 .trigger2",
-			  duration: "2150px"
+			  duration: "2100px"
 			})
 			  .setTween(timeline)
 			  .addTo(controller)
-			  .addIndicators();
+			  //.addIndicators();
+
+			  $(window).scroll(function(){
+					//스크롤 이동시 작동코드
+					let bt = $('#sec8').offset().top - $(document).scrollTop() - $(window).height() - 80;
+					if( $(document).scrollTop() < $('#sec8').offset().top  + $(window).height()){
+						if( $(document).scrollTop() + $(window).height() >= $('#sec8').offset().top){
+							$('.secwrap7 ').css('position', 'absolute');
+							$('.secwrap7 ').css('left', '0');
+							$('.secwrap7 ').css('bottom', bt);
+						}else{
+							$('.secwrap7 ').css('position', 'relative');
+							$('.secwrap7 ').css('left', '0');
+							$('.secwrap7 ').css('bottom', '0');
+						}
+					}
+				});
+
 		</script>
 
 		<section class="secwrap8" id="sec8">
@@ -341,7 +440,6 @@
 </div>  
 
 <script type="text/javascript" src="../../assets/js/tracking.js"></script>
-<script type="text/javascript" src="../../assets/js/jquery.hoverdir.js"></script>
 
 </body>
 </html>
