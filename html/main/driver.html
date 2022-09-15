@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="referrer" content="always">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<!-- No cache -->
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+<!-- Summary -->
+<meta property="og:title" content="danida">
+<meta property="og:description" content="danida">
+<title>danida</title>
+<link rel="stylesheet" type="text/css" href="../../assets/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="../../assets/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../../assets/css/driver.css" />
+<link rel="stylesheet" type="text/css" href="../../assets/css/swiper.css" />
+<script type="text/javascript" src="../../assets/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+</head>
+<body>
+<div id="layout">
+    <!-- header -->
+    <div id="header">
+        <div id="" class="container">
+            <h1 id="logo"><a href="javascript:;'" onclick="$('html, body').animate({scrollTop: 0}, 1000);">danida</a></h1>
+            <div class="hd_menu">
+                <ul id="nav">
+                    <li><a href="javascript:;" data-target="#sec1">다니다 운전자 신청하기</a></li>
+                    <li><a href="javascript:;" data-target="#sec2">다니다를 선택해야 하는 이유</a></li>
+                    <li><a href="javascript:;" data-target="#sec3">질문과 답</a></li>
+                </ul>
+                <script>
+                $('#nav a').click(function(){
+                let dataTarget = $(this).attr('data-target');
+                let target = $(dataTarget).offset().top - 100;
+                $('html, body').animate({
+                scrollTop: target
+                }, 700);
+                });
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+
+
+    <div class="driver_content">
+		<div id="sec1" class="driver_visual">
+			<div id="" class="container">
+				<a href="javascript:;" class="start">시작하기</a>
+				<div class="dv_cnt">
+					<div class="title">내가 원하는 만큼, 원하는 시간에, 원하는 곳에서</div>
+					<div class="dv_logo">danida driver</div>
+					<div class="app_store">
+						<a href="javascript:;" class="google">google play</a>
+						<a href="javascript:;" class="apple">app store</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="dv_choose">
+			<div id="sec2" class="container">
+				<div class="dv_title">다니다를 선택해야하는 이유</div>
+				<div class="choose">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="item item1">
+									<div class="inner">
+										<span class="tit">매우 빠른 주 단위 정산 시스템</span>
+										<span class="cnt">다니다 운전자 수입은 주 단위로 정산되어 등록된<br/>은행 계좌로 즉시 입금됩니다.</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="item item2">
+									<div class="inner">
+										<span class="tit">자유로운 출근, 퇴근</span>
+										<span class="cnt">정해진 출근, 퇴근 시간 없이 원하는대로 출근, 퇴근하며 내가 원하는 시간에 운행하세요.</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="item item3">
+									<div class="inner">
+										<span class="tit">캐리어배달 서비스 운행 시 추가 보너스</span>
+										<span class="cnt">여행자의 호텔 목적지로 캐리어를 배달 시 운행 거리가 길어지게 되므로 더 많은 수입도 생기고 추가 보너스도 지급! 일석이조!</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="item item4">
+									<div class="inner">
+										<span class="tit">365일 24시간 연중무휴 고객센터</span>
+										<span class="cnt">다니다 운전자 분들을 위해 고객센터를 쉬지 않고 운영합니다.<br/>도움이 필요할 때 언제든지 물어봐주세요.</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script>
+					var swiper = new Swiper(".choose .swiper-container", {
+						slidesPerView: "auto",
+						spaceBetween: 30,
+					  });
+					</script>
+				</div>
+			</div>
+		</div>
+
+		<div class="dv_faq">
+			<div id="sec3" class="container">
+				<div class="dv_title">질문과 답</div>
+				<div class="faq_cate">
+					<a href="javascript:;" class="active">전체보기</a>
+					<a href="javascript:;">회원가입</a>
+					<a href="javascript:;">정산</a>
+					<a href="javascript:;">서비스이용</a>
+					<a href="javascript:;">계정/개인정보</a>
+					<a href="javascript:;">기타</a>
+				</div>
+				<script>
+				$('.faq_cate a').click(function(){
+					$('.faq_cate a').removeClass('active')
+					$(this).addClass('active')
+				});
+				</script>
+				<div class="faq_list">
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ 회원가입 ]</span>
+							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ 회원가입 ]</span>
+							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ 회원가입 ]</span>
+							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ 회원가입 ]</span>
+							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ 회원가입 ]</span>
+							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ 회원가입 ]</span>
+							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ 회원가입 ]</span>
+							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ 회원가입 ]</span>
+							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ 회원가입 ]</span>
+							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="page_nav">
+					<!-- a와a사이 빈칸X -->
+					<a href="#" class="pg_page prev">이전</a><a href="#" class="pg_page">1<span class="sound_only">페이지</span></a><span class="pg_page active"><span class="sound_only">현재</span>2<span class="sound_only">페이지</span></span><a href="#" class="pg_page">3<span class="sound_only">페이지</span></a><a href="#" class="pg_page">4<span class="sound_only">페이지</span></a><a href="#" class="pg_page">5<span class="sound_only">페이지</span></a><a href="#" class="pg_page next">다음</a>
+				</div>
+				
+
+				<div class="layer_form faq_layer" style="display:none;">
+					<div class="layer_box">
+						<div class="faq_title">
+							<span class="cate">[회원가입]</span>
+							외부 계정의 회원가입 방법과로그인 방식을 알고 싶어요. 
+						</div>
+						<div class="faq_cnt">
+							네이버, 구글, 페이스북, 애플에서 사용하시는 아이디가 있으신가요?<br/>
+							넥슨에 새로 아이디를 만들지 않고, 사용하시던 각각의 외부계정으로 넥슨 서비스를 이용하실 수 있습니다.<br/><br/>
+
+							1. 로그인 화면에서 회원가입 버튼을 클릭합니다.<br/><br/>
+
+							2. 회원가입 버튼 클릭 후 사용하실 외부ID를 선택하여 클릭합니다.<br/><br/>
+
+							3. ID로 가입하실 네이버 ID와 비밀번호를 입력한 후 로그인합니다.<br/>
+							(네이버 사이트에 회원가입을 완료하신 상태여야 합니다. 네이버에 가입되어 있는 아이디와 비밀번호를 입력해주세요.)<br/><br/>
+
+							4. 이용약관에 동의합니다. (선택 약관은 동의하지 않아도 회원가입이 가능합니다.)<br/><br/>
+
+							5. 본인 명의의 휴대폰, 신용/체크카드로 본인확인을 진행합니다.<br/>
+							(본 도움말은 휴대폰 인증 방법을 기반으로 작성하였습니다.)<br/><br/>
+
+							6. 이용하시는 통신사를 선택하신 후 QR인증, 간편인증, 문자인증을 통해 본인확인을 진행합니다.<br/><br/>
+
+							QR인증: 화면에 나타나는 QR코드를 휴대폰으로 인식한 후 진행하는 방법<br/>
+							간편인증: 휴대폰에 전송된 알림을 클릭하여 비밀번호 또는 지문인식으로 진행하는 방법
+						</div>
+						<button type="button" class="layer_close" onclick="$('.faq_layer').hide();">닫기</button>
+					</div>
+					<span class="layer_bg" onclick="$('.faq_layer').hide();"></span>
+				</div>
+
+			</div>
+		</div>
+    </div>
+
+	<div id="footer">
+		<div class="container">
+			<div class="ft_cnt clearfix">
+				<a href="javascript:;" class="ft_logo">danida</a>
+				<div class="ft_cp">
+					다니다 주식회사 danida Corp.
+				</div>
+				<div class="ft_info">
+					<div class="clearfix">
+						<span>서울시 강남구 강남대로 140길 9 비피유 3층</span>
+						<span>대표 : 장병철</span>
+					</div>
+					<div class="clearfix">
+						<span>사업자등록번호: 789-87-02140</span>
+						<span>통신판매사업자번호: 제 2022-서울강남-04240호 </span>
+						<span>전화번호: 02-542-0402 </span>
+						<span>팩스번호: 02-543-0403 </span>
+						<span>이메일: official@danidam.com</span>
+					</div>
+				</div>
+				
+			</div>
+			<div class="ft_bottom">
+				<div class="ft_copy">Copyright © <strong>2022 danida Corp</strong>. All rights reserved.</div>
+				<ul class="ft_links clearfix">
+					<li><a href="javascript:;">기업소개</a></li>
+					<li><a href="javascript:;">서비스이용약관</a></li>
+					<li><a href="javascript:;">개인정보처리방침</a></li>
+					<li><a href="javascript:;">사업자정보확인</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
