@@ -52,11 +52,22 @@
             <span class="sound_only">메뉴 열기</span>
             </button>
             <div class="hd_menu">
+				<div class="menu_logo">danida</div>
+				<div class="lang">
+					<a href="javascript:;" class="active">한</a>
+					<a href="javascript:;">영</a>
+				</div>
                 <ul id="nav">
                     <li><a href="javascript:;" data-target="#sec3">서비스 소개</a></li>
                     <li><a href="javascript:;" data-target="#sec4">주요 서비스</a></li>
                     <li><a href="javascript:;" data-target="#sec9">핵심 가치</a></li>
                 </ul>
+				<ul class="hd_links">
+					<li><a href="javascript:;">기업소개</a></li>
+					<li><a href="javascript:;">서비스이용약관</a></li>
+					<li><a href="javascript:;">개인정보처리방침</a></li>
+					<li><a href="javascript:;">사업자정보확인</a></li>
+				</ul>
                 <script>
                 $('#nav a').click(function(){
                 let dataTarget = $(this).attr('data-target');
@@ -75,8 +86,28 @@
     <div id="example-wrapper" class="main_content">
         <div class="sec1_height"></div>
         <section class="secwrap1" id="sec1">
-        <div class="main_video">
-            
+        <div class="main_visual">
+            <div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<span style="background-image:url('../../assets/images/sec3_bg.jpg');"></span>
+					</div>
+					<div class="swiper-slide">
+						<span style="background-image:url('../../assets/images/sec3_bg.jpg');"></span>
+					</div>
+					<div class="swiper-slide">
+						<span style="background-image:url('../../assets/images/sec3_bg.jpg');"></span>
+					</div>
+				</div>
+			</div>
+			<script>
+			var swiper = new Swiper(".main_visual .swiper-container", {
+				loop:true,
+			autoplay: {
+			  delay: 3500,
+			},
+			});
+			</script>
         </div>
         <div class="section1">
             <div class="left">
