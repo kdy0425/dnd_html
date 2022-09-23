@@ -106,7 +106,7 @@ text-align:center;color:#fff;}
 content:"";position:absolute;left:80px;top:50%;}
 .sec7_cnt .box.box1:before{width:295px;height:580px;
 background-image:url('../images/sec7_box1.png');}
-.sec7_cnt .box.box2:before{width:320px;height:513px;transform:translate(0,0);top:auto;bottom:0;
+.sec7_cnt .box.box2:before{width:371px;height:484px;transform:translate(0,0);top:auto;bottom:0;
 background-image:url('../images/sec7_box2.png');}
 .sec7_cnt .box.box3:before{width:295px;height:580px;
 background-image:url('../images/sec7_box3.png');}
