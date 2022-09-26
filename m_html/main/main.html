@@ -34,7 +34,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 <script type="text/javascript" src="../../m_assets/js/uncompressed/plugins/animation.gsap.js"></script>
 <script type="text/javascript" src="../../m_assets/js/swiper.min.js"></script>
- <script type="text/javascript" src="../../m_assets/js/uncompressed/plugins/debug.addIndicators.js"></script>
+ <!-- <script type="text/javascript" src="../../m_assets/js/uncompressed/plugins/debug.addIndicators.js"></script> -->
 
 <script>var controller = new ScrollMagic.Controller();</script>
 
@@ -68,16 +68,40 @@
 					<li><a href="javascript:;">개인정보처리방침</a></li>
 					<li><a href="javascript:;">사업자정보확인</a></li>
 				</ul>
-                <script>
-                $('#nav a').click(function(){
-                let dataTarget = $(this).attr('data-target');
-                let target = $(dataTarget).offset().top;
-                $('html, body').animate({
-                scrollTop: target
-                }, 1000);
-                });
-                </script>
             </div>
+			<span class="menu_bg"></span>
+			 <script>
+			$('.menu_toggle,.menu_bg,#nav a').click(function(){
+				if($('.menu_toggle').hasClass('active')){
+					$('.menu_toggle').removeClass('active');
+					$('html').css('overflow-y', 'visible');
+					$('.hd_menu').animate({right: "-100%",opacity:'0'}, {
+						duration: 500}
+					);
+					$('.hd_menu').show();
+					$('#to_top').fadeIn();
+					$('.menu_bg').fadeOut();
+				}else{
+					$('.menu_toggle').addClass('active');
+					$('html').css('overflow-y', 'hidden');
+					$('.hd_menu').show();
+					$('.hd_menu').animate({right: "0",opacity:"1"}, {
+						duration: 500}
+					);
+					$('#to_top').fadeOut();
+					$('.menu_bg').fadeIn();
+				}
+			});
+
+
+			$('#nav a').click(function(){
+			let dataTarget = $(this).attr('data-target');
+			let target = $(dataTarget).offset().top;
+			$('html, body').animate({
+			scrollTop: target
+			}, 1000);
+			});
+			</script>
         </div>
     </div>
     <!-- //header -->
@@ -90,13 +114,16 @@
             <div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<span style="background-image:url('../../assets/images/sec3_bg.jpg');"></span>
+						<span style="background-image:url('../../m_assets/images/main_visual1.jpg');"></span>
 					</div>
 					<div class="swiper-slide">
-						<span style="background-image:url('../../assets/images/sec3_bg.jpg');"></span>
+						<span style="background-image:url('../../m_assets/images/main_visual2.jpg');"></span>
 					</div>
 					<div class="swiper-slide">
-						<span style="background-image:url('../../assets/images/sec3_bg.jpg');"></span>
+						<span style="background-image:url('../../m_assets/images/main_visual3.jpg');"></span>
+					</div>
+					<div class="swiper-slide">
+						<span style="background-image:url('../../m_assets/images/main_visual4.jpg');"></span>
 					</div>
 				</div>
 			</div>
@@ -214,7 +241,7 @@
         	})
         	.setTween(timeline)
         	.addTo(controller)
-        	.addIndicators();
+        	//.addIndicators();
         }
 
         </script>

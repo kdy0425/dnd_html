@@ -1,15 +1,10 @@
 @charset "utf-8";
 
 #layout{height:100%;background-color:#fff;}
-#header{background-color:#fff;height:50px;position:fixed;left:0;width:100%;top:0;z-index:2;}
+#header{background-color:#fff;height:50px;position:fixed;left:0;width:100%;top:0;z-index:2000;}
 #header #logo{float:left;margin:14px 0;position: relative;z-index:2500;}
 #header #logo a{display:block;height:20px;width:90px;text-indent:-999em;overflow:hidden;background-repeat: no-repeat;background-position:center center;background-size:contain;background-image: url('../images/logo.png');}
 #header .hd_menu{float:right;}
-#nav{display:none;}
-#nav li{float:left;}
-#nav li + li{margin-left:80px;position:relative;}
-#nav li + li:before{content: "";position: absolute;top:34px;left:-40px;width:1px;height:12px;background-color: #d7d7d7;}
-#nav li a{display:block;color:#000;font-size:1.8rem;padding:26px 7px;height:80px;transition:all 0.2s;position: relative;font-weight: 500;overflow:hidden;}
 
 #footer{background-color:#f7f7f7;position:relative;z-index:2;border-top:1px solid #e2e2e2;padding:22px 0;}
 #footer .ft_cnt{color:#222;font-size:13px;}
@@ -117,8 +112,9 @@ background-image:url('../images/sec7_box3.png');}
 }
 .section8{position:sticky;top:0;display:flex;align-items:center;margin:0 auto;z-index:2;padding:calc(50vh - 94px) 30px;min-height:100vh;
 background-image:url('../images/sec8_bg.jpg');background-repeat:no-repeat;background-size:cover;background-position: center center;}
+.section8 .cnt{width:100%;}
 .section8 .title{color:#fff;font-size:33px;font-weight:500;line-height:1.2;letter-spacing:-2px;text-align:center;}
-.section8 p{color:#fff;font-size:15px;margin-top:20px;word-break:keep-all;}
+.section8 p{color:#fff;font-size:15px;margin-top:20px;word-break:keep-all;text-align:center;}
 .section8 span{display:block;color:#fff;font-size:15px;margin-top:25px;}
 
 
@@ -128,3 +124,64 @@ background-image:url('../images/sec8_bg.jpg');background-repeat:no-repeat;backgr
 .section9 .title:after{content:"";display:block;height:320px;margin-top:30px;
 background-image:url('../images/sec9_bg.jpg');background-repeat:no-repeat;background-size:cover;background-position: center center;}
 .section9 p{color:#444;font-size:16px;padding:20px 20px 0;word-break:keep-all;}
+
+.menu_toggle{}
+.menu_toggle span{}
+.menu_toggle span + span{}
+
+.menu_toggle{width:28px;height:28px;background-color:transparent;border:0;position:absolute;right:20px;top:11px;z-index:446000;}
+.menu_toggle span{display:block;width:20px;height:2px;background-color:#474747;margin-left:auto;margin-right:auto;transition:all 0.3s;}
+.menu_toggle span:nth-child(1){}
+.menu_toggle span:nth-child(2){margin-top:6px;}
+.menu_toggle span:nth-child(3){margin-top:6px;}
+
+.menu_toggle.active span{position:absolute;width:28px;}
+.menu_toggle.active span:nth-child(1){transform:rotate(45deg);top:13px;left:0px;}
+.menu_toggle.active span:nth-child(2){opacity:0;margin-top:0;}
+.menu_toggle.active span:nth-child(3){transform:rotate(-45deg);top:13px;left:0px;margin-top:0;}
+
+.hd_menu{position:fixed;width:80%;background-color:#fff;padding:20px;height:100%;overflow-y:auto;z-index:444000;right:-100%;top:0;margin:0;box-shadow: 0 0 15px rgba(0,0,0,.15);opacity:0;}
+.hd_menu{padding:80px 24px 20px;display:flex;flex-direction:column;}
+.hd_menu .menu_logo{height:31px;background-size:contain;background-repeat:no-repeat;background-position:left center;background-image:url('../images/logo.png');text-indent:-999em;overflow:hidden;}
+.hd_menu .lang{margin-top:40px;}
+.hd_menu .lang a{float:left;background-color:#cecece;min-width:55px;height:33px;line-height:33px;color:#fff;text-align:center;font-weight:500;font-size:15px;}
+.hd_menu .lang a.active{background-color:#2eabe3;}
+.hd_menu #nav{margin-top:25px;margin-bottom:20px;}
+.hd_menu #nav li{}
+.hd_menu #nav li + li{border-top:1px solid #d5d5d5;}
+.hd_menu #nav li a{display:block;color:#222;font-size:22px;font-weight:500;padding:20px 0;}
+.hd_menu .hd_links{margin-top:auto;max-width:245px;}
+.hd_menu .hd_links li{display:inline-block;margin:4px 20px 4px 0;position:relative;}
+.hd_menu .hd_links li:nth-child(2n){margin-right:0;}
+.hd_menu .hd_links li:nth-child(2n):before{content:"";position:absolute;left:-10px;top:4px;background-color:#ddd;width:1px;height:10px;}
+.hd_menu .hd_links li a{color:#222222;font-size:14px;}
+.menu_bg{display:none;position:fixed;right:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,.8);z-index:443000;}
+
+            <div class="hd_menu">
+				<div class="menu_logo">danida</div>
+				<div class="lang">
+					<a href="javascript:;" class="active">한</a>
+					<a href="javascript:;">영</a>
+				</div>
+                <ul id="nav">
+                    <li><a href="javascript:;" data-target="#sec3">서비스 소개</a></li>
+                    <li><a href="javascript:;" data-target="#sec4">주요 서비스</a></li>
+                    <li><a href="javascript:;" data-target="#sec9">핵심 가치</a></li>
+                </ul>
+				<ul class="hd_links">
+					<li><a href="javascript:;">기업소개</a></li>
+					<li><a href="javascript:;">서비스이용약관</a></li>
+					<li><a href="javascript:;">개인정보처리방침</a></li>
+					<li><a href="javascript:;">사업자정보확인</a></li>
+				</ul>
+                <script>
+                $('#nav a').click(function(){
+                let dataTarget = $(this).attr('data-target');
+                let target = $(dataTarget).offset().top;
+                $('html, body').animate({
+                scrollTop: target
+                }, 1000);
+                });
+                </script>
+            </div>
+        </div>
