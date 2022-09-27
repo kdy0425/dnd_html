@@ -16,12 +16,12 @@
 <meta property="og:title" content="danida">
 <meta property="og:description" content="danida">
 <title>danida</title>
-<link rel="stylesheet" type="text/css" href="../../assets/css/normalize.css" />
-<link rel="stylesheet" type="text/css" href="../../assets/css/common.css" />
-<link rel="stylesheet" type="text/css" href="../../assets/css/driver.css" />
-<link rel="stylesheet" type="text/css" href="../../assets/css/swiper.css" />
-<script type="text/javascript" src="../../assets/js/lib/jquery.min.js"></script>
-<script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/driver.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/swiper.css" />
+<script type="text/javascript" src="../../m_assets/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="../../m_assets/js/swiper.min.js"></script>
 </head>
 <body>
 <div id="layout">
@@ -29,88 +29,110 @@
     <div id="header">
         <div id="" class="container">
             <h1 id="logo"><a href="javascript:;'" onclick="$('html, body').animate({scrollTop: 0}, 1000);">danida</a></h1>
-            <div class="hd_menu">
+			<button type="button" class="menu_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="sound_only">메뉴 열기</span>
+            </button>
+			<div class="hd_menu">
+				<div class="menu_logo">danida</div>
+				<div class="lang">
+					<a href="javascript:;" class="active">한</a>
+					<a href="javascript:;">영</a>
+				</div>
                 <ul id="nav">
                     <li><a href="javascript:;" data-target="#sec1">다니다 운전자 신청하기</a></li>
                     <li><a href="javascript:;" data-target="#sec2">다니다를 선택해야 하는 이유</a></li>
                     <li><a href="javascript:;" data-target="#sec3">질문과 답</a></li>
                 </ul>
-                <script>
-                $('#nav a').click(function(){
-                let dataTarget = $(this).attr('data-target');
-                let target = $(dataTarget).offset().top - 100;
-                $('html, body').animate({
-                scrollTop: target
-                }, 700);
-                });
-                </script>
+				<ul class="hd_links">
+					<li><a href="javascript:;">기업소개</a></li>
+					<li><a href="javascript:;">서비스이용약관</a></li>
+					<li><a href="javascript:;">개인정보처리방침</a></li>
+					<li><a href="javascript:;">사업자정보확인</a></li>
+				</ul>
             </div>
+			<span class="menu_bg"></span>
+			 <script>
+			$('.menu_toggle,.menu_bg,#nav a').click(function(){
+				if($('.menu_toggle').hasClass('active')){
+					$('.menu_toggle').removeClass('active');
+					$('html').css('overflow-y', 'visible');
+					$('.hd_menu').animate({right: "-100%",opacity:'0'}, {
+						duration: 500}
+					);
+					$('.hd_menu').show();
+					$('#to_top').fadeIn();
+					$('.menu_bg').fadeOut();
+				}else{
+					$('.menu_toggle').addClass('active');
+					$('html').css('overflow-y', 'hidden');
+					$('.hd_menu').show();
+					$('.hd_menu').animate({right: "0",opacity:"1"}, {
+						duration: 500}
+					);
+					$('#to_top').fadeOut();
+					$('.menu_bg').fadeIn();
+				}
+			});
+
+
+			$('#nav a').click(function(){
+			let dataTarget = $(this).attr('data-target');
+			let target = $(dataTarget).offset().top;
+			$('html, body').animate({
+			scrollTop: target
+			}, 1000);
+			});
+			</script>
         </div>
     </div>
     <!-- //header -->
 
-
     <div class="driver_content">
 		<div id="sec1" class="driver_visual">
 			<div id="" class="container">
-				<a href="javascript:;" class="start">시작하기</a>
 				<div class="dv_cnt">
-					<div class="title">내가 원하는 만큼, 원하는 시간에, 원하는 곳에서</div>
+					<div class="title">내가 원하는 만큼,<br/> 원하는 시간에,<br/> 원하는 곳에서</div>
 					<div class="dv_logo">danida driver</div>
-					<div class="app_store">
-						<a href="javascript:;" class="google">google play</a>
-						<a href="javascript:;" class="apple">app store</a>
+					<div class="app_store clearfix">
+						<a href="javascript:;" class="google"><img src="../../m_assets/images/driver/store_google.png" alt=""></a>
+						<a href="javascript:;" class="apple"><img src="../../m_assets/images/driver/store_apple.png" alt=""></a>
 					</div>
 				</div>
+				<a href="javascript:;" class="start">시작하기</a>
 			</div>
 		</div>
 
 		<div class="dv_choose">
 			<div id="sec2" class="container">
-				<div class="dv_title">다니다를 선택해야하는 이유</div>
+				<div class="dv_title">다니다를<br/> 선택해야하는 이유</div>
 				<div class="choose">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="item item1">
-									<div class="inner">
-										<span class="tit">매우 빠른 주 단위 정산 시스템</span>
-										<span class="cnt">다니다 운전자 수입은 주 단위로 정산되어 등록된<br/>은행 계좌로 즉시 입금됩니다.</span>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="item item2">
-									<div class="inner">
-										<span class="tit">자유로운 출근, 퇴근</span>
-										<span class="cnt">정해진 출근, 퇴근 시간 없이 원하는대로 출근, 퇴근하며 내가 원하는 시간에 운행하세요.</span>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="item item3">
-									<div class="inner">
-										<span class="tit">캐리어배달 서비스 운행 시 추가 보너스</span>
-										<span class="cnt">여행자의 호텔 목적지로 캐리어를 배달 시 운행 거리가 길어지게 되므로 더 많은 수입도 생기고 추가 보너스도 지급! 일석이조!</span>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="item item4">
-									<div class="inner">
-										<span class="tit">365일 24시간 연중무휴 고객센터</span>
-										<span class="cnt">다니다 운전자 분들을 위해 고객센터를 쉬지 않고 운영합니다.<br/>도움이 필요할 때 언제든지 물어봐주세요.</span>
-									</div>
-								</div>
-							</div>
+					<div class="item item1">
+						<div class="inner">
+							<span class="tit">매우 빠른 주 단위 <br/>정산 시스템</span>
+							<span class="cnt">다니다 운전자 수입은 주 단위로 정산되어 등록된 은행 계좌로 즉시 입금됩니다.</span>
 						</div>
 					</div>
-					<script>
-					var swiper = new Swiper(".choose .swiper-container", {
-						slidesPerView: "auto",
-						spaceBetween: 30,
-					  });
-					</script>
+					<div class="item item2">
+						<div class="inner">
+							<span class="tit">자유로운 출근, 퇴근</span>
+							<span class="cnt">정해진 출근, 퇴근 시간 없이 원하는대로 출근, 퇴근하며 내가 원하는 시간에 운행하세요.</span>
+						</div>
+					</div>
+					<div class="item item3">
+						<div class="inner">
+							<span class="tit">캐리어배달 서비스 운행 시 추가 보너스</span>
+							<span class="cnt">여행자의 호텔 목적지로 캐리어를 배달 시 운행 거리가 길어지게 되므로 더 많은 수입도 생기고 추가 보너스도 지급! 일석이조!</span>
+						</div>
+					</div>
+					<div class="item item4">
+						<div class="inner">
+							<span class="tit">365일 24시간 연중무휴 <br/> 고객센터</span>
+							<span class="cnt">다니다 운전자 분들을 위해 고객센터를 쉬지 않고 운영합니다.<br/>도움이 필요할 때 언제든지 물어봐주세요.</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -122,9 +144,6 @@
 					<a href="javascript:;" class="active">전체보기</a>
 					<a href="javascript:;">회원가입</a>
 					<a href="javascript:;">정산</a>
-					<a href="javascript:;">서비스이용</a>
-					<a href="javascript:;">계정/개인정보</a>
-					<a href="javascript:;">기타</a>
 				</div>
 				<script>
 				$('.faq_cate a').click(function(){
@@ -169,29 +188,12 @@
 							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
 						</a>
 					</div>
-					<div class="item">
-						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
-							<span class="cate">[ 회원가입 ]</span>
-							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
-							<span class="cate">[ 회원가입 ]</span>
-							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
-							<span class="cate">[ 회원가입 ]</span>
-							<span class="subject">회원가입시에 전화인증은 어떻게 받으면 되나요?</span>
-						</a>
-					</div>
 				</div>
 
 				<div class="page_nav">
-					<!-- a와a사이 빈칸X -->
-					<a href="#" class="pg_page prev">이전</a><a href="#" class="pg_page">1<span class="sound_only">페이지</span></a><span class="pg_page active"><span class="sound_only">현재</span>2<span class="sound_only">페이지</span></span><a href="#" class="pg_page">3<span class="sound_only">페이지</span></a><a href="#" class="pg_page">4<span class="sound_only">페이지</span></a><a href="#" class="pg_page">5<span class="sound_only">페이지</span></a><a href="#" class="pg_page next">다음</a>
+					<a href="javascript:;" class="pg_prev">이전 페이지</a>
+					<div class="pg"><strong>1</strong> / 3</div>
+					<a href="javascript:;" class="pg_next">다음 페이지</a>
 				</div>
 				
 
@@ -200,6 +202,7 @@
 						<div class="faq_title">
 							<span class="cate">[회원가입]</span>
 							외부 계정의 회원가입 방법과로그인 방식을 알고 싶어요. 
+							<button type="button" class="layer_close" onclick="$('.faq_layer').hide();">닫기</button>
 						</div>
 						<div class="faq_cnt">
 							네이버, 구글, 페이스북, 애플에서 사용하시는 아이디가 있으신가요?<br/>
@@ -222,7 +225,6 @@
 							QR인증: 화면에 나타나는 QR코드를 휴대폰으로 인식한 후 진행하는 방법<br/>
 							간편인증: 휴대폰에 전송된 알림을 클릭하여 비밀번호 또는 지문인식으로 진행하는 방법
 						</div>
-						<button type="button" class="layer_close" onclick="$('.faq_layer').hide();">닫기</button>
 					</div>
 					<span class="layer_bg" onclick="$('.faq_layer').hide();"></span>
 				</div>
@@ -242,10 +244,8 @@
 					<div class="clearfix">
 						<span>서울시 강남구 강남대로 140길 9 비피유 3층</span>
 						<span>대표 : 장병철</span>
-					</div>
-					<div class="clearfix">
 						<span>사업자등록번호: 789-87-02140</span>
-						<span>통신판매사업자번호: 제 2022-서울강남-04240호 </span>
+						<span>통신판매사업자번호: 제2022-서울강남-04240호 </span>
 						<span>전화번호: 02-542-0402 </span>
 						<span>팩스번호: 02-543-0403 </span>
 						<span>이메일: official@danidam.com</span>
@@ -255,12 +255,6 @@
 			</div>
 			<div class="ft_bottom">
 				<div class="ft_copy">Copyright © <strong>2022 danida Corp</strong>. All rights reserved.</div>
-				<ul class="ft_links clearfix">
-					<li><a href="javascript:;">기업소개</a></li>
-					<li><a href="javascript:;">서비스이용약관</a></li>
-					<li><a href="javascript:;">개인정보처리방침</a></li>
-					<li><a href="javascript:;">사업자정보확인</a></li>
-				</ul>
 			</div>
 		</div>
 	</div>

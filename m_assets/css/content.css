@@ -155,32 +155,3 @@ background-image:url('../images/sec9_bg.jpg');background-repeat:no-repeat;backgr
 .hd_menu .hd_links li:nth-child(2n):before{content:"";position:absolute;left:-10px;top:4px;background-color:#ddd;width:1px;height:10px;}
 .hd_menu .hd_links li a{color:#222222;font-size:14px;}
 .menu_bg{display:none;position:fixed;right:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,.8);z-index:443000;}
-
-            <div class="hd_menu">
-				<div class="menu_logo">danida</div>
-				<div class="lang">
-					<a href="javascript:;" class="active">한</a>
-					<a href="javascript:;">영</a>
-				</div>
-                <ul id="nav">
-                    <li><a href="javascript:;" data-target="#sec3">서비스 소개</a></li>
-                    <li><a href="javascript:;" data-target="#sec4">주요 서비스</a></li>
-                    <li><a href="javascript:;" data-target="#sec9">핵심 가치</a></li>
-                </ul>
-				<ul class="hd_links">
-					<li><a href="javascript:;">기업소개</a></li>
-					<li><a href="javascript:;">서비스이용약관</a></li>
-					<li><a href="javascript:;">개인정보처리방침</a></li>
-					<li><a href="javascript:;">사업자정보확인</a></li>
-				</ul>
-                <script>
-                $('#nav a').click(function(){
-                let dataTarget = $(this).attr('data-target');
-                let target = $(dataTarget).offset().top;
-                $('html, body').animate({
-                scrollTop: target
-                }, 1000);
-                });
-                </script>
-            </div>
-        </div>
