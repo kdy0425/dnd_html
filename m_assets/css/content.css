@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-#layout{height:100%;background-color:#fff;}
+#layout{height:100%;background-color:#fff;width:100%;}
 #header{background-color:#fff;height:50px;left:0;width:100%;top:0;z-index:2000;position:relative;}
 #header #logo{float:left;margin:14px 0;position: relative;z-index:2500;}
 #header #logo a{display:block;height:20px;width:90px;text-indent:-999em;overflow:hidden;background-repeat: no-repeat;background-position:center center;background-size:contain;background-image: url('../images/logo.png');}
@@ -45,7 +45,6 @@ section.secwrap4{background-color:#ccc;}
 .main_visual span{display:block;height:100vh;background-color:#ddd;background-size:cover;background-repeat: no-repeat;background-position:center center;}
 #sec2{background-color:#2eabe3;padding:calc(40vh - 60px) 0;text-align:center;}
 #sec2 .sec_title{text-align:center;color:#fff;font-size:70px;position:sticky;top:calc(50vh - 154px);font-weight:500;letter-spacing:-4px;
-    
    }
 #sec2 .sec_title span{display:block;line-height:1.1}
 #sec2 .sec_title .title_row2{display:block; --headline-gradient-direction: 90deg;
@@ -59,11 +58,12 @@ section.secwrap4{background-color:#ccc;}
 
 #sec3{background-color:#222;background-attachment:fixed;
 text-align:center;color:#fff;position:relative;}
-#sec3 .txt_box{position: sticky;  top: 0;display:flex;flex-direction:column;justify-content:space-between;height:100vh; width:100%;padding:20vh 40px;
+#sec3 .txt_box{position: sticky;  top: 0;display:flex;flex-direction:column;justify-content:center;height:100vh; width:100%;padding:100px 40px;
 background-image:url('../images/sec3_bg.jpg');background-repeat:no-repeat;background-position: center top;background-size: cover;} 
-#sec3 .txt {opacity: 0.5;  font-size:23px;  width: 100%;   line-height:1.5; text-align: center;letter-spacing:-2px;word-break:keep-all;}
-#sec3 .trigger {  width: 100%;  height: 10px;  margin-bottom: 450px;}
-#sec3 .trigger.trigger_3{margin-bottom:900px;}
+#sec3 .txt {opacity: 0.5;  font-size:23px; width: 100%;   line-height:1.5; text-align: center;letter-spacing:-2px;word-break:keep-all;}
+#sec3 .txt + .txt{margin-top:75px;}
+#sec3 .trigger {  width: 100%;  height: 10px;  margin-bottom: 750px;}
+#sec3 .trigger.trigger_3{margin-bottom:1200px;}
 
 #sec4{background-color:#f3f9fb;padding:15vh 0 5vh;}
 .section4{position:sticky;top:5vh;height:90vh;display:flex;flex-direction:column;justify-content:center;margin:0 auto;word-break:keep-all;padding:0 30px;}
