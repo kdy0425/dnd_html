@@ -57,7 +57,7 @@ section.secwrap4{background-color:#ccc;}
     background-position: 100% 50%,50% 50%;}
 #sec2 .trigger{margin-bottom:1300px;width: 100%; height: 10px;}
 
-#sec3{padding-top:30vh;padding-bottom:30vh;background-color:#222;background-attachment:fixed;background-image:url('../images/sec3_bg.jpg');background-repeat:no-repeat;background-position: center center;background-size: auto 100vh;
+#sec3{padding-top:30vh;padding-bottom:30vh;background-color:#222;background-attachment:fixed;background-image:url('../images/sec3_bg.jpg');background-repeat:no-repeat;background-position: center center;background-size: auto 100%;
 text-align:center;color:#fff;}
 #sec3 .txt_box{position: sticky;  top: 20vh;display:flex;flex-direction:column;justify-content:space-between;height:60vh; width:100%;padding:0 40px;} 
 #sec3 .txt {opacity: 0.5;  font-size:23px;  width: 100%;   line-height:1.5; text-align: center;letter-spacing:-2px;word-break:keep-all;}

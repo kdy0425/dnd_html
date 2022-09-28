@@ -43,7 +43,7 @@
 				</div>
                 <ul id="nav">
                     <li><a href="javascript:;" data-target="#sec1">다니다 운전자 신청하기</a></li>
-                    <li><a href="javascript:;" data-target="#sec2">다니다를 선택해야 하는 이유</a></li>
+                    <li><a href="javascript:;" data-target="#sec2">다니다를 선택해야하는 이유</a></li>
                     <li><a href="javascript:;" data-target="#sec3">질문과 답</a></li>
                 </ul>
 				<ul class="hd_links">
@@ -102,6 +102,11 @@
 					</div>
 				</div>
 				<a href="javascript:;" class="start">시작하기</a>
+				<script>
+				$(document).ready(function(){
+					$('#sec1 .start').height($(window).height() - 450);
+				});
+				</script>
 			</div>
 		</div>
 
@@ -117,13 +122,13 @@
 					</div>
 					<div class="item item2">
 						<div class="inner">
-							<span class="tit">자유로운 출근, 퇴근</span>
+							<span class="tit">자유로운 출-퇴근</span>
 							<span class="cnt">정해진 출근, 퇴근 시간 없이 원하는대로 출근, 퇴근하며 내가 원하는 시간에 운행하세요.</span>
 						</div>
 					</div>
 					<div class="item item3">
 						<div class="inner">
-							<span class="tit">캐리어배달 서비스 운행 시 추가 보너스</span>
+							<span class="tit">캐리어배달 서비스 운행 시 <br/>추가 보너스</span>
 							<span class="cnt">여행자의 호텔 목적지로 캐리어를 배달 시 운행 거리가 길어지게 되므로 더 많은 수입도 생기고 추가 보너스도 지급! 일석이조!</span>
 						</div>
 					</div>
@@ -242,8 +247,8 @@
 				</div>
 				<div class="ft_info">
 					<div class="clearfix">
-						<span>서울시 강남구 강남대로 140길 9 비피유 3층</span>
-						<span>대표 : 장병철</span>
+						<span>주소: 서울시 강남구 강남대로 140길 9 비피유 3층</span>
+						<span>대표: 장병철</span>
 						<span>사업자등록번호: 789-87-02140</span>
 						<span>통신판매사업자번호: 제2022-서울강남-04240호 </span>
 						<span>전화번호: 02-542-0402 </span>
