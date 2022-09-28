@@ -17,7 +17,7 @@
 <title>danida</title>
 <link rel="stylesheet" type="text/css" href="../../m_assets/css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="../../m_assets/css/common.css" />
-<link rel="stylesheet" type="text/css" href="../../m_assets/css/content.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/content.css?2022-09-28" />
 <link rel="stylesheet" type="text/css" href="../../m_assets/css/jquery.scrollbar.css" />
 <link rel="stylesheet" type="text/css" href="../../m_assets/css/examples.css" />
 <link rel="stylesheet" type="text/css" href="../../m_assets/css/swiper.css" />
@@ -189,7 +189,8 @@
         </section>
 
 
-        <section class="secwrap3" id="sec3">
+        <section class="secwrap3 clearfix" id="sec3">
+		<span class="bg"></span>
         <span class="trigger_0"></span>
         <!-- <div class="trigger trigger_11"></div> -->
         <div id="" class="txt_box">
@@ -201,10 +202,6 @@
         <div class="trigger trigger_2"></div>
         <div class="trigger trigger_3"></div>
         <script>
-        var ht = ($(window).height() / 2) + ($("#sec3 .txt1").outerHeight() / 2);
-
-
-
         var animateElem = ["#sec3 .txt1", "#sec3 .txt2", "#sec3 .txt3"];
         var triggerElem = [".trigger_1", ".trigger_2", ".trigger_3"];
 
@@ -213,19 +210,6 @@
         	var currentTriggerElem = triggerElem[i];
 
         	var timeline = new TimelineMax();
-			/*
-        	var tween_bgposition = new TimelineMax();
-        	tween_bgposition
-        	.to(animateElem[i], 0.3, {
-        	ease: "slow(0.7, 0.7)",
-        	y: -ht
-        	})
-        	.to(animateElem[i], 0.3, {
-        	ease: "slow(0.7, 0.7)",
-        	y: -ht * 2
-        	}, "0.7");
-			*/
-
         	var tween_opacity = new TimelineMax();
         	tween_opacity
         	.to(animateElem[i], 0.3, {
@@ -242,7 +226,7 @@
 
         	var scene_main = new ScrollMagic.Scene({
         	triggerElement: triggerElem[i],
-        	duration: "1000px"
+        	duration: "1200px"
         	})
         	.setTween(timeline)
         	.addTo(controller)
