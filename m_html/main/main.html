@@ -191,49 +191,13 @@
 
         <section class="secwrap3 clearfix" id="sec3">
 		<span class="bg"></span>
-        <span class="trigger_0"></span>
-        <!-- <div class="trigger trigger_11"></div> -->
         <div id="" class="txt_box">
 			<div class="txt txt1">여행지에서 언어장벽 없이 이동하고 싶다면</div>
 			<div class="txt txt2">공항 도착 후 여행지로 바로 가고 싶지만 캐리어 때문에 불편했다면 </div>
 			<div class="txt txt3">우리 아이와 함께하는 여행, 카시트가 무거워 불편했다면</div>
         </div>
-        <div class="trigger trigger_1"></div>
-        <div class="trigger trigger_2"></div>
-        <div class="trigger trigger_3"></div>
-        <script>
-        var animateElem = ["#sec3 .txt1", "#sec3 .txt2", "#sec3 .txt3"];
-        var triggerElem = [".trigger_1", ".trigger_2", ".trigger_3"];
-
-        for (var i = 0; i < animateElem.length; i++) {
-        	var currentAnimateElem = animateElem[i];
-        	var currentTriggerElem = triggerElem[i];
-
-        	var timeline = new TimelineMax();
-        	var tween_opacity = new TimelineMax();
-        	tween_opacity
-        	.to(animateElem[i], 0.3, {
-        	ease: Linear.easeNone,
-        	opacity: 1
-        	})
-        	.to(animateElem[i], 0.3, {
-        	ease: Linear.easeNone,
-        	opacity: 0.5
-        	}, "0.7");
-
-        	//timeline.add(tween_bgposition, 0).add(tween_opacity, 0);
-        	timeline.add(tween_opacity, 0);
-
-        	var scene_main = new ScrollMagic.Scene({
-        	triggerElement: triggerElem[i],
-        	duration: "750px"
-        	})
-        	.setTween(timeline)
-        	.addTo(controller)
-        	//.addIndicators();
-        }
-
-        </script>
+        
+        
         </section>
 
         <section class="secwrap4" id="sec4">

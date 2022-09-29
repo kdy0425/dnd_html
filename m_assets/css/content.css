@@ -58,12 +58,10 @@ section.secwrap4{background-color:#ccc;}
 
 #sec3{background-color:#222;background-attachment:fixed;
 text-align:center;color:#fff;position:relative;}
-#sec3 .txt_box{position: sticky;  top: 0;display:flex;flex-direction:column;justify-content:center;height:100vh; width:100%;padding:100px 40px;
+#sec3 .txt_box{display:flex;flex-direction:column;justify-content:center;height:100vh; width:100%;padding:100px 40px;
 background-image:url('../images/sec3_bg.jpg');background-repeat:no-repeat;background-position: center top;background-size: cover;} 
-#sec3 .txt {opacity: 0.5;  font-size:23px; width: 100%;   line-height:1.5; text-align: center;letter-spacing:-2px;word-break:keep-all;}
+#sec3 .txt {opacity: 1;  font-size:23px; width: 100%;   line-height:1.5; text-align: center;letter-spacing:-2px;word-break:keep-all;}
 #sec3 .txt + .txt{margin-top:75px;}
-#sec3 .trigger {  width: 100%;  height: 10px;  margin-bottom: 750px;}
-#sec3 .trigger.trigger_3{margin-bottom:1200px;}
 
 #sec4{background-color:#f3f9fb;padding:15vh 0 5vh;}
 .section4{position:sticky;top:5vh;height:90vh;display:flex;flex-direction:column;justify-content:center;margin:0 auto;word-break:keep-all;padding:0 30px;}
