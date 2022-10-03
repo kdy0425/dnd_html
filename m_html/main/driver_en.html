@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="referrer" content="always">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<!-- No cache -->
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+<!-- Summary -->
+<meta property="og:title" content="danida">
+<meta property="og:description" content="danida">
+<title>danida</title>
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/driver.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/swiper.css" />
+<script type="text/javascript" src="../../m_assets/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="../../m_assets/js/swiper.min.js"></script>
+</head>
+<body>
+<div id="layout" class="en">
+    <!-- header -->
+    <div id="header">
+        <div id="" class="container">
+            <h1 id="logo"><a href="javascript:;'" onclick="$('html, body').animate({scrollTop: 0}, 1000);">danida</a></h1>
+			<button type="button" class="menu_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="sound_only">open menu</span>
+            </button>
+			<div class="hd_menu">
+				<div class="menu_logo">danida</div>
+				<div class="lang">
+					<a href="javascript:;" >kr</a>
+					<a href="javascript:;" class="active">en</a>
+				</div>
+                <ul id="nav">
+                    <li><a href="javascript:;" data-target="#sec1">Apply for Danida drivers</a></li>
+                    <li><a href="javascript:;" data-target="#sec2">Why Danida?</a></li>
+                    <li><a href="javascript:;" data-target="#sec3">Questions & Answers</a></li>
+                </ul>
+				<ul class="hd_links">
+					<li><a href="javascript:;">Company Introduction</a></li>
+					<li><a href="javascript:;">Terms of Service</a></li>
+					<li><a href="javascript:;">Privacy Policy</a></li>
+					<li><a href="javascript:;">Confirmation of Business Information</a></li>
+				</ul>
+            </div>
+			<span class="menu_bg"></span>
+			 <script>
+			$('.menu_toggle,.menu_bg,#nav a').click(function(){
+				if($('.menu_toggle').hasClass('active')){
+					$('.menu_toggle').removeClass('active');
+					$('html').css('overflow-y', 'visible');
+					$('.hd_menu').animate({right: "-100%",opacity:'0'}, {
+						duration: 500}
+					);
+					$('.hd_menu').show();
+					$('#to_top').fadeIn();
+					$('.menu_bg').fadeOut();
+				}else{
+					$('.menu_toggle').addClass('active');
+					$('html').css('overflow-y', 'hidden');
+					$('.hd_menu').show();
+					$('.hd_menu').animate({right: "0",opacity:"1"}, {
+						duration: 500}
+					);
+					$('#to_top').fadeOut();
+					$('.menu_bg').fadeIn();
+				}
+			});
+
+
+			$('#nav a').click(function(){
+			let dataTarget = $(this).attr('data-target');
+			let target = $(dataTarget).offset().top;
+			$('html, body').animate({
+			scrollTop: target
+			}, 1000);
+			});
+			</script>
+        </div>
+    </div>
+    <!-- //header -->
+
+    <div class="driver_content">
+		<div id="sec1" class="driver_visual">
+			<div id="" class="container">
+				<div class="dv_cnt">
+					<div class="title">As much as you want,<br/> At any time and place you want</div>
+					<div class="dv_logo">danida driver</div>
+					<div class="app_store clearfix">
+						<a href="javascript:;" class="google"><img src="../../m_assets/images/driver/store_google_en.png" alt=""></a>
+						<a href="javascript:;" class="apple"><img src="../../m_assets/images/driver/store_apple_en.png" alt=""></a>
+					</div>
+				</div>
+				<a href="javascript:;" class="start">start</a>
+				<script>
+				$(document).ready(function(){
+					$('#sec1 .start').height($(window).height() - 410);
+				});
+				</script>
+			</div>
+		</div>
+
+		<div class="dv_choose">
+			<div id="sec2" class="container">
+				<div class="dv_title">The reason why you should choose Danida</div>
+				<div class="choose">
+					<div class="item item1">
+						<div class="inner">
+							<span class="tit">Expeditious weekly calculation on balance</span>
+							<span class="cnt">Danida driver income is settled on a weekly basis and deposited immediately into a registered bank account</span>
+						</div>
+					</div>
+					<div class="item item2">
+						<div class="inner">
+							<span class="tit">Flexibility for driver</span>
+							<span class="cnt">Drivers log in and out of the system anytime they want</span>
+						</div>
+					</div>
+					<div class="item item3">
+						<div class="inner">
+							<span class="tit">Additional bonuses with luggage delivery service</span>
+							<span class="cnt">When you deliver luggage to a traveler's hotel destination, the longer the distance traveled, the more income and additional bonuses you receive! Killing two birds with one stone!</span>
+						</div>
+					</div>
+					<div class="item item4">
+						<div class="inner">
+							<span class="tit">24/7/365 customer centre</span>
+							<span class="cnt">We operate a customer centre for Danida drivers<br/>Contact us whenever you need help</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="dv_faq">
+			<div id="sec3" class="container">
+				<div class="dv_title">Questions and Answers</div>
+				<div class="faq_cate">
+					<a href="javascript:;" class="active">Full View</a>
+					<a href="javascript:;">Sign Up</a>
+					<a href="javascript:;">Profile</a>
+					<a href="javascript:;">Ride</a>
+					<a href="javascript:;">Settlement</a>
+					<a href="javascript:;">Review</a>
+					<a href="javascript:;">Etc</a>
+				</div>
+				<script>
+				$('.faq_cate a').click(function(){
+					$('.faq_cate a').removeClass('active')
+					$(this).addClass('active')
+				});
+				</script>
+				<div class="faq_list">
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ Sign Up ]</span>
+							<span class="subject">Phone permission needed?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ Sign Up ]</span>
+							<span class="subject">Phone permission needed?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ Sign Up ]</span>
+							<span class="subject">Phone permission needed?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ Sign Up ]</span>
+							<span class="subject">Phone permission needed?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ Sign Up ]</span>
+							<span class="subject">Phone permission needed?</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="javascript:;" class="faq_a" onclick="$('.faq_layer').show();">
+							<span class="cate">[ Sign Up ]</span>
+							<span class="subject">Phone permission needed?</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="page_nav">
+					<a href="javascript:;" class="pg_prev">prev page</a>
+					<div class="pg"><strong>1</strong> / 3</div>
+					<a href="javascript:;" class="pg_next">next page</a>
+				</div>
+				
+
+				<div class="layer_form faq_layer" style="display:none;">
+					<div class="layer_box">
+						<div class="faq_title">
+							<span class="cate">[ Sign Up ]</span>
+							Phone permission needed?
+							<button type="button" class="layer_close" onclick="$('.faq_layer').hide();">close</button>
+						</div>
+						<div class="faq_cnt">
+							Phone permission is required because of the dispatch system uses the call fuction for the communication with users.
+						</div>
+					</div>
+					<span class="layer_bg" onclick="$('.faq_layer').hide();"></span>
+				</div>
+
+			</div>
+		</div>
+    </div>
+
+	<div id="footer">
+		<div class="container">
+			<div class="ft_cnt clearfix">
+				<a href="javascript:;" class="ft_logo">danida</a>
+				<div class="ft_cp">
+					Danida Co., Ltd
+				</div>
+				<div class="ft_info">
+					<div class="clearfix">
+						<span>9, Gangnam-daero 140-gil, Gangnam-gu, Seoul, Republic of Korea, BPU 3rd Floor</span>
+						<span>President: Byeongchul Jang</span>
+						span>Business Registration Number: 789-87-02140</span>
+                        <span>Mail Order Business Number: Je2022-SeoulGangnam-04240Ho</span>
+                        <span>Telephone Number: 02-542-0402</span>
+                        <span>Fax: 02-543-0403</span>
+                        <span>Email: official@danidam.com</span>
+					</div>
+				</div>
+				
+			</div>
+			<div class="ft_bottom">
+				<div class="ft_copy">Copyright © <strong>2022 danida Corp</strong>. All rights reserved.</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

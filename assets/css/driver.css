@@ -32,6 +32,7 @@ text-indent:-999em;overflow:hidden;background-repeat: no-repeat;background-posit
 
 .driver_visual{height:876px;padding:90px 0;background-repeat: no-repeat;background-position:center center;background-size:cover;background-image: url('../images/driver/driver_visual.jpg');}
 .driver_visual .start{float:left;text-indent:-999em;overflow:hidden;width:395px;height:686px;background-repeat: no-repeat;background-position:center center;background-size:394.5px;background-image: url('../images/driver/dv_start.png');}
+.en .driver_visual .start{background-image: url('../images/driver/dv_start_en.png');}
 .driver_visual .dv_cnt{float:right;width:734px;margin-top:170px;}
 .driver_visual .title{color:#fff;font-size:36px;font-weight:500;}
 .driver_visual .dv_logo{margin-top:30px;width:456px;height:51px;text-indent:-999em;overflow:hidden;background-repeat: no-repeat;background-position:center center;background-size:456px;background-image: url('../images/driver/dv_logo.png');}
@@ -40,6 +41,8 @@ text-indent:-999em;overflow:hidden;background-repeat: no-repeat;background-posit
 .driver_visual .app_store a{float:left;text-indent:-999em;overflow:hidden;width:303px;height:92px;background-repeat: no-repeat;background-position:center center;background-size:contain;}
 .driver_visual .app_store .google{background-image: url('../images/driver/store_google.png');}
 .driver_visual .app_store .apple{background-image: url('../images/driver/store_apple.png');}
+.en .driver_visual .app_store .google{background-image: url('../images/driver/store_google_en.png');}
+.en .driver_visual .app_store .apple{background-image: url('../images/driver/store_apple_en.png');}
 
 .dv_choose{padding:85px 0 100px;overflow:hidden;}
 .dv_choose .dv_title{color:#000000;font-size:40px;font-weight:500;margin-bottom:70px;}

@@ -31,10 +31,13 @@
 .hd_menu #nav li{}
 .hd_menu #nav li + li{border-top:1px solid #d5d5d5;}
 .hd_menu #nav li a{display:block;color:#222;font-size:22px;font-weight:500;padding:20px 0;word-break:keep-all;}
+.en .hd_menu #nav li a{font-size:18px;}
 .hd_menu .hd_links{margin-top:auto;max-width:245px;}
 .hd_menu .hd_links li{display:inline-block;margin:4px 20px 4px 0;position:relative;}
 .hd_menu .hd_links li:nth-child(2n){margin-right:0;}
 .hd_menu .hd_links li:nth-child(2n):before{content:"";position:absolute;left:-10px;top:4px;background-color:#ddd;width:1px;height:10px;}
+.en .hd_menu .hd_links li{display:block;}
+.en .hd_menu .hd_links li:nth-child(2n):before{display:none;}
 .hd_menu .hd_links li a{color:#222222;font-size:14px;}
 .menu_bg{display:none;position:fixed;right:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,.8);z-index:443000;}
 
@@ -53,16 +56,18 @@ text-indent:-999em;overflow:hidden;background-repeat: no-repeat;background-posit
 .driver_visual{height:calc(100vh - 50px);padding:10% 0;display:flex;flex-direction:column;align-items:center;justify-content:center;background-repeat: no-repeat;background-position:center center;background-size:cover;background-image: url('../images/driver/driver_visual.jpg');}
 .driver_visual .dv_cnt{}
 .driver_visual .title{color:#fff;font-size:28px;font-weight:500;text-align:center;word-break:keep-all;line-height:1.3;}
+.en .driver_visual .title{font-size:22px;line-height:1.2;}
 .driver_visual .dv_logo{margin-top:20px;height:30px;text-indent:-999em;overflow:hidden;background-repeat: no-repeat;background-position:center center;background-size:contain;background-image: url('../images/driver/dv_logo.png');}
 
 .driver_visual .app_store{width:230px;margin:30px auto 0;}
 .driver_visual .app_store a{display:block;}
 
 .driver_visual .start{margin-top:15px;display:block;text-indent:-999em;overflow:hidden;height:calc(100vh - 450px);background-repeat: no-repeat;background-position:center center;background-size:contain;background-image: url('../images/driver/dv_start.png');}
-
+.en .driver_visual .start{height:calc(100vh - 380px);background-image: url('../images/driver/dv_start_en.png');}
 
 .dv_choose{padding:45px 0 45px;}
 .dv_choose .dv_title{color:#000000;font-size:28px;font-weight:500;margin-bottom:30px;text-align:center;line-height:1.3;}
+.en .dv_choose .dv_title{font-size:22px;}
 .dv_choose .choose{}
 .dv_choose .choose .item{padding-top:85%;;position:relative;background-repeat: no-repeat;background-position:center center;background-size:cover;border-radius:10px;overflow:hidden;word-break:keep-all;}
 .dv_choose .choose .item + .item{margin-top:15px;}
@@ -76,6 +81,7 @@ text-indent:-999em;overflow:hidden;background-repeat: no-repeat;background-posit
 
 .dv_faq{padding:25px 0 45px;}
 .dv_faq .dv_title{color:#000000;font-size:28px;font-weight:500;margin-bottom:20px;text-align:center;line-height:1.3;}
+.en .dv_faq .dv_title{font-size:22px;}
 .dv_faq .faq_cate{margin-bottom:10px;}
 .dv_faq .faq_cate a{display:inline-block;margin-top:10px;margin-right:26px;color:#666666;font-size:16px;font-weight:500;padding-bottom:3px;}
 .dv_faq .faq_cate a.active{color:#000;border-bottom:1px solid #000;}

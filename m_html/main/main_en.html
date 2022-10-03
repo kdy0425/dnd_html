@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="referrer" content="always">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<!-- No cache -->
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+<!-- Summary -->
+<meta property="og:title" content="danida">
+<meta property="og:description" content="danida">
+<title>danida</title>
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/content.css?2022-09-28" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/jquery.scrollbar.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/examples.css" />
+<link rel="stylesheet" type="text/css" href="../../m_assets/css/swiper.css" />
+
+<script type="text/javascript" src="../../m_assets/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="../../m_assets/js/jquery.scrollbar.min.js"></script>
+
+<script type="text/javascript" src="../../m_assets/js/lib/highlight.pack.js"></script>
+<script type="text/javascript" src="../../m_assets/js/lib/modernizr.custom.min.js"></script>
+<script type="text/javascript" src="../../m_assets/js/examples.js"></script>
+
+<script type="text/javascript" src="../../m_assets/js/lib/gsap3/gsap.min.js"></script>
+<script type="text/javascript" src="../../m_assets/js/uncompressed/ScrollMagic.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<script type="text/javascript" src="../../m_assets/js/uncompressed/plugins/animation.gsap.js"></script>
+<script type="text/javascript" src="../../m_assets/js/swiper.min.js"></script>
+ <!-- <script type="text/javascript" src="../../m_assets/js/uncompressed/plugins/debug.addIndicators.js"></script> -->
+
+<script>var controller = new ScrollMagic.Controller();</script>
+
+</head>
+<body>
+<div id="layout" class="en">
+    <!-- header -->
+    <div id="header">
+        <div id="" class="container">
+            <h1 id="logo"><a href="javascript:;'" onclick="$('html, body').animate({scrollTop: 0}, 1000);">danida</a></h1>
+            <button type="button" class="menu_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="sound_only">open menu</span>
+            </button>
+            <div class="hd_menu">
+				<div class="menu_logo">danida</div>
+				<div class="lang">
+					<a href="javascript:;">kr</a>
+					<a href="javascript:;" class="active">en</a>
+				</div>
+                <ul id="nav">
+                    <li><a href="javascript:;" data-target="#sec3">Introduction to Services</a></li>
+                    <li><a href="javascript:;" data-target="#sec4">Main Service</a></li>
+                    <li><a href="javascript:;" data-target="#sec9">Core Value</a></li>
+                </ul>
+				<ul class="hd_links">
+					<li><a href="javascript:;">Company Introduction</a></li>
+					<li><a href="javascript:;">Terms of Service</a></li>
+					<li><a href="javascript:;">Privacy Policy</a></li>
+					<li><a href="javascript:;">Confirmation of Business Information</a></li>
+				</ul>
+            </div>
+			<span class="menu_bg"></span>
+			 <script>
+			$('.menu_toggle,.menu_bg,#nav a').click(function(){
+				if($('.menu_toggle').hasClass('active')){
+					$('.menu_toggle').removeClass('active');
+					$('html').css('overflow-y', 'visible');
+					$('.hd_menu').animate({right: "-100%",opacity:'0'}, {
+						duration: 500}
+					);
+					$('.hd_menu').show();
+					$('#to_top').fadeIn();
+					$('.menu_bg').fadeOut();
+				}else{
+					$('.menu_toggle').addClass('active');
+					$('html').css('overflow-y', 'hidden');
+					$('.hd_menu').show();
+					$('.hd_menu').animate({right: "0",opacity:"1"}, {
+						duration: 500}
+					);
+					$('#to_top').fadeOut();
+					$('.menu_bg').fadeIn();
+				}
+			});
+
+
+			$('#nav a').click(function(){
+			let dataTarget = $(this).attr('data-target');
+			let target = $(dataTarget).offset().top;
+			$('html, body').animate({
+			scrollTop: target
+			}, 1000);
+			});
+			</script>
+        </div>
+    </div>
+    <!-- //header -->
+
+
+    <div id="example-wrapper" class="main_content">
+        <div class="sec1_height"></div>
+        <section class="secwrap1" id="sec1">
+        <div class="main_visual">
+            <div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<span style="background-image:url('../../m_assets/images/main_visual1.jpg');"></span>
+					</div>
+					<div class="swiper-slide">
+						<span style="background-image:url('../../m_assets/images/main_visual2.jpg');"></span>
+					</div>
+					<div class="swiper-slide">
+						<span style="background-image:url('../../m_assets/images/main_visual3.jpg');"></span>
+					</div>
+					<div class="swiper-slide">
+						<span style="background-image:url('../../m_assets/images/main_visual4.jpg');"></span>
+					</div>
+				</div>
+			</div>
+			<script>
+			var swiper = new Swiper(".main_visual .swiper-container", {
+				loop:true,
+			autoplay: {
+			  delay: 3500,
+			},
+			});
+			</script>
+        </div>
+        <div class="section1">
+            <div class="left">
+                <div class="sec_title"><img src="../../m_assets/images/sec1_title_en.png" alt="danida The beginning and end of a Journey"></div>
+                <div class="sec_store">
+                    <div class="item">
+                        <a href="javascript:;"><img src="../../m_assets/images/sec1_appstore.png" alt="appstore"></a>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:;"><img src="../../m_assets/images/sec1_googleplay.png" alt="googleplay"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+            </div>
+			<script>
+			$(document).ready(function(){
+				$('.section1 .right').height($(window).height() - 320);
+			});
+			</script>
+        </div>
+        </section>
+        <section class="secwrap2" id="sec2">    
+        <div class="sec_title"><span class="title_row1">Travel</span><span class="title_row2">without</span><span class="title_row3">any</span><span class="title_row4">baggage</span><span class="title_row5">now</span></div>
+        <div class="trigger"></div>
+        <script>
+        var timeline = new TimelineMax();
+
+        var tween_bgposition = new TimelineMax();
+
+        tween_bgposition
+        .to("#sec2 .sec_title .title_row2", 0.3, {
+        ease: Linear.easeNone,
+        backgroundPosition: "0% 50%,50% 50%",
+        })
+        .to("#sec2 .sec_title .title_row2", 0.3, {
+        ease: Linear.easeNone,
+        backgroundPosition: "100% 50%,50% 50%",
+        }, "0.4");
+
+
+        timeline.add(tween_bgposition, 0);
+
+        var scene_main = new ScrollMagic.Scene({
+        triggerElement: "#sec2 .trigger",
+        duration: "1100px"
+        })
+        .setTween(timeline)
+        .addTo(controller)
+        //.addIndicators();
+        </script>
+        </section>
+
+
+        <section class="secwrap3 clearfix" id="sec3">
+		<span class="bg"></span>
+        <div id="" class="txt_box">
+			<div class="txt txt1">If you'd like to travel without language barriers</div>
+			<div class="txt txt2">After arriving at the airport, you'd like to move straight to the attractions, it was incovenience due to your luggage though</div>
+			<div class="txt txt3">Traveling with your children, booster seats were heavy and uncomfortable</div>
+        </div>
+        
+        
+        </section>
+
+        <section class="secwrap4" id="sec4">
+        <div class="section4">
+                <div class="title">A passenger to driver matching in a conversational language</div>
+				<div class="img"></div>
+                <div id="" class="txt_box">
+					<p>To avoid discomfort due to language while traveling in a vehicle on a travel destination Driver matching takes place in the selected language</p>
+					<span>*Korean, English, and Japanese available</span>
+                </div>
+        </div>
+        <div class="trigger trigger_1"></div>
+        <script>
+        var timeline = new TimelineMax();
+
+        var scene_main = new ScrollMagic.Scene({
+        triggerElement: "#sec4 .trigger",
+        duration: "1100px"
+        })
+        .setTween(timeline)
+        .addTo(controller)
+        //.addIndicators();
+        </script>
+        </section>
+
+
+		<section class="secwrap5" id="sec5">
+		<div class="section5">
+			<div class="title">We deliver your luggage to make your trip conveninet</div>
+			<div class="img"></div>
+			<div id="" class="txt_box">
+				<p>Now, uncomfortable carriers or golf bags will be delivered along the way</p>
+			</div>
+		</div>
+		<div class="trigger trigger_1"></div>
+		</section>
+		<script>
+		var timeline = new TimelineMax();
+
+		var scene_main = new ScrollMagic.Scene({
+		triggerElement: "#sec5 .trigger",
+		duration: "1100px"
+		})
+		.setTween(timeline)
+		.addTo(controller)
+		//.addIndicators();
+		</script>
+		</section>
+
+		<section class="secwrap6" id="sec6">
+			<div class="section6">
+				<div class="cnt">
+					<div class="title">We deliver your luggage comfortably without any worries</div>
+					<p>Danida, which you can trust, delivers it safely</p>
+				</div>
+			</div>
+		<div class="trigger trigger_1"></div>
+		</section>
+		<script>
+		var timeline = new TimelineMax();
+
+		var scene_main = new ScrollMagic.Scene({
+		triggerElement: "#sec6 .trigger",
+		duration: "1100px"
+		})
+		.setTween(timeline)
+		.addTo(controller)
+		//.addIndicators();
+		</script>
+		</section>
+		
+
+		<section class="secwrap7 clearfix" id="sec7">
+			<div class="section7">
+				<div class="title">3 ways to deliver your carrier without anxiety</div>
+				<div class="sec7_cnt">
+					<div id="" class="sec7_slider">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="box box1">
+										<div class="txt">
+											<div class="tit">Smart luggage trackers in real time</div>
+											<div class="cnt">Travel and track your carrier delivery location anytime, anywhere</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="box box2">
+										<div class="txt">
+											<div class="tit">Security Stickers on Luggage</div>
+											<div class="cnt">Now is the time to deliver luggage<br/>Luggage is not tampered just like chicken delivered to your house</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="box box3">
+										<div class="txt">
+											<div class="tit">The photo of confirmation that the carrier is delivered</div>
+											<div class="cnt">Check your luggage that has been delivered with a photo, and you can check in showing the tag photo</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+						
+					</div>
+					<script>
+					var swiper = new Swiper(".sec7_slider .swiper-container", {
+					spaceBetween: 15,
+					navigation: {
+					  nextEl: ".sec7_slider .swiper-button-next",
+					  prevEl: ".sec7_slider .swiper-button-prev",
+					},
+					});
+					</script>
+
+
+				</div>
+			</div>
+		</section>
+        
+
+        <section class="secwrap8" id="sec8">
+        <div class="section8">
+            <div class="cnt">
+                <div class="title">The heavy booster seats for your children is solved with a touch</div>
+                <p>You don't have to carry booster seats when traveling with your children</p>
+            </div>
+        </div>
+        <div class="trigger trigger_1"></div>
+        <script>
+        var timeline = new TimelineMax();
+        var scene_main = new ScrollMagic.Scene({
+        triggerElement: "#sec8 .trigger",
+		duration: "1100px"
+        })
+        .setTween(timeline)
+        .addTo(controller)
+        //.addIndicators();
+        </script>
+        </section>
+
+        <section class="secwrap9" id="sec9">
+        <div class="section9">
+            <div class="cnt">
+                <div class="title">The nature of a journey</div>
+                <p>In the meantime, luggage has been considered an obstacle for discomfort<br/>
+                Danida wants to solve the inconvenient factors of travel, such as language and baggage for the happiness and convenience of travelers<br/>
+                The moment of travel and the time of travelers are precious
+                </p>
+            </div>
+        </div>
+        </section>
+
+        <div id="footer">
+            <div class="container">
+                <div class="ft_cnt clearfix">
+                    <div class="ft_cp">
+                        <span class="cp">Danida Co., Ltd</span>
+                    </div>
+                    <div class="ft_info">
+						<span>9, Gangnam-daero 140-gil, Gangnam-gu, Seoul, Republic of Korea, BPU 3rd Floor</span>
+                        <span>President: Byeongchul Jang</span>
+                        <span>Business Registration Number: 789-87-02140</span>
+                        <span>Mail Order Business Number: Je2022-SeoulGangnam-04240Ho</span>
+                        <span>Telephone Number: 02-542-0402</span>
+                        <span>Fax: 02-543-0403</span>
+                        <span>Email: official@danidam.com</span>
+                    </div>
+                </div>
+                <div class="ft_copy">Copyright © <strong>2022 danida Corp</strong>. All rights reserved.</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
