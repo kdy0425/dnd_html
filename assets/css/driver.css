@@ -9,9 +9,17 @@
 #nav li + li{margin-left:80px;position:relative;}
 #nav li + li:before{content: "";position: absolute;top:34px;left:-40px;width:1px;height:12px;background-color: #d7d7d7;}
 #nav li a{display:block;color:#000;font-size:1.8rem;padding:26px 7px;height:80px;transition:all 0.2s;position: relative;font-weight: 500;overflow:hidden;}
-.lang{margin-top:23px;float:right;margin-left:50px;}
-.lang a{float:left;background-color:#cecece;min-width:55px;height:33px;line-height:33px;color:#fff;text-align:center;font-weight:500;font-size:15px;}
-.lang a.active{background-color:#2eabe3;}
+.lang{margin-top:16px;float:right;margin-left:50px;position:relative;}
+.lang .lang_btn{color:#444;font-size:18px;width:110px;height:46px;border:0;background-color:#fff;background-repeat:no-repeat;background-position:left 4px center;background-size:17px;
+background-image: url("../images/web_icon.jpg");position:relative;}
+.lang .lang_btn:before{content:"";display:block;width:14px;height:14px;position:absolute;right:5px;top:50%;margin-top:-7px;background-position:center center;background-repeat:no-repeat;background-size:15px;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-chevron-down' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M6 9l6 6l6 -6'%3E%3C/path%3E%3C/svg%3E");}
+.lang .lang_list{position:absolute;left:0;top:46px;z-index:10;width:100%;border:1px solid #222;background-color:#fff;text-align:center;}
+.lang .lang_list a{display:block;color:#999999;font-size:18px;text-align:center;padding:12px 0;}
+.lang .lang_list a + a{border-top:1px solid #e5e5e5;}
+.lang .lang_list a:hover{color:#444;}
+.lang .lang_list a.active{color:#444;}
+.lang:hover .lang_list{display:block !important;border:1px solid #ddd;}
 
 #footer{background-color:#191919;position:relative;padding:70px 0 50px;color:#f5f5f5;font-size:14px;}
 #footer .ft_cnt{}
